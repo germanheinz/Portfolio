@@ -1,0 +1,26 @@
+.container {
+    padding-top: 60px;
+}
+
+.login-card {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    /* margin-top: 60px; */
+}
+
+.login-padding {
+    padding-bottom: 20px;
+}
+
+.example-header-image {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    background-size: cover;
+}
+
+.my-signin2{
+    height: 50px;
+    display: inline-block;
+    width: 225px;
+    margin-bottom: 20px;
+}

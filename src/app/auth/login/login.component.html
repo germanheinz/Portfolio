@@ -1,0 +1,28 @@
+<div class="container">
+    <mat-card class="login-card">
+        <form [formGroup]="form" autocomplete="off" autocomplete="off" style="padding-left: 20px;padding-right: 20px;" novalidate (ngSubmit)="signIn()" fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+            <mat-card-title class="login-padding">Login</mat-card-title>
+            <mat-card-subtitle>Don't You Have An <a routerLink='/register'>Account</a>?</mat-card-subtitle>
+            <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" name="email" id="email">
+                    <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" name="password" id="password">
+                    <mat-error *ngIf="hasError('password', 'required')">Password is required</mat-error>
+                </mat-form-field>
+                <br>
+            </div>
+            <div id="my-signin2" class="my-signin2"></div>
+            <mat-card-actions>
+                <button mat-button mat-raised-button color="primary" [disabled]="!form.valid" *ngIf="!loading">SAVE</button>
+                <button mat-button mat-raised-button color="primary" [disabled]=true *ngIf="loading"><i class="fa fa-spin fa-sync"></i></button>
+                <button mat-button>CANCEL</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>

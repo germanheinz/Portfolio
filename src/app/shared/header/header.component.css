@@ -1,0 +1,37 @@
+/* .header {
+    background: url(../../../assets/img/mountain.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+
+  }
+.header .navbar {
+  background-color: transparent !important;
+}
+.container{
+  margin-left: 10px;
+}
+
+
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+.example-sidenav-content {
+  /* display: flex; 
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+} */
+
+.example-spacer {
+  flex: 1 1 auto;
+}

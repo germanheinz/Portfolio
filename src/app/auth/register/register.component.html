@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-card class="register-card">
+        <form [formGroup]="form" autocomplete="off" style="padding-left: 20px;padding-right: 20px;" novalidate (ngSubmit)="signUp()" fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+            <mat-card-title class="register-padding">Register</mat-card-title>
+            <mat-card-subtitle>Do you have an <a routerLink='/login'>Account</a>?</mat-card-subtitle>
+            <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>UserName</mat-label>
+                    <input matInput formControlName="username" name="username" id="username">
+                    <mat-error *ngIf="hasError('username', 'required')">Username is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" name="email" id="email">
+                    <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" name="password" id="password">
+                    <mat-error *ngIf="hasError('password', 'required')">Password is required</mat-error>
+                </mat-form-field>
+                <br>
+                <!-- <mat-form-field appearance="outline">
+                    <mat-label>Select</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Option</mat-option>
+                        <mat-option value="option">Option</mat-option>
+                        <mat-option value="option">Option</mat-option>
+                        <mat-option value="option">Option</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br> -->
+            </div>
+            <mat-card-actions>
+                <button mat-button mat-raised-button color="primary" [disabled]="!form.valid" *ngIf="!loading">SAVE</button>
+                <button mat-button mat-raised-button color="primary" [disabled]=true *ngIf="loading"><mat-spinner></mat-spinner></button>
+                <button mat-button>CANCEL</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>
